@@ -1,0 +1,40 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+html, body {
+  font-family: "Montserrat", sans-serif, sans-serif; }
+
+html {
+  font-size: 15px;
+  letter-spacing: normal;
+  line-height: 1.3;
+  color: #000000; }
+
+* {
+  box-sizing: border-box; }
+
+.content-area {
+  font-size: 1rem; }
+  .content-area p, .content-area div {
+    margin-top: 0;
+    margin-bottom: 1.4rem; }
+    .content-area p:last-child, .content-area div:last-child {
+      margin-bottom: 0; }
+  .content-area blockquote {
+    font-style: italic; }
+  .content-area a, .content-area a:hover, .content-area a:active, .content-area a:visited, .content-area a:focus {
+    font-family: inherit;
+    text-decoration: underline; }
+  .content-area a:hover, .content-area a:active, .content-area a:focus {
+    text-decoration: none; }
+  .content-area b,
+  .content-area strong {
+    font-family: inherit; }
+  .content-area i,
+  .content-area em {
+    font-style: italic; }
+  .content-area img {
+    float: none !important;
+    display: block;
+    margin: 7px 0;
+    max-width: 100%;
+    width: 100%;
+    height: auto !important; }

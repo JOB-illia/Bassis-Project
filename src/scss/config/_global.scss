@@ -1,0 +1,13 @@
+html, body {
+  font-family: $f-main, sans-serif;
+}
+html {
+  font-size: $fz-root + px;
+  letter-spacing: normal;
+  line-height: 1.3;
+  color: $c-black;
+}
+
+* {
+  box-sizing: border-box;
+}

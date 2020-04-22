@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Артика</title>
+  
+
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="workspace">
+    <div class="workspace__cont">
+
+        <div class="workspace__header">
+            <header class="header">
+    header
+</header>
+        </div>
+        <main class="workspace__content">
+            Rjy
+        </main>
+        <div class="workspace__footer">
+            <footer class="footer">
+    footer
+</footer>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src="js/main.js"></script>
+<script src="js/wow.js"></script>
+<script>
+    var wow = new WOW(
+        {
+            boxClass:     'wow',      // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset:       -100,          // distance to the element when triggering the animation (default is 0)
+            mobile:       false,       // trigger animations on mobile devices (default is true)
+            live:         true,       // act on asynchronously loaded content (default is true)
+            callback:     function(box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null,    // optional scroll container selector, otherwise use window,
+            resetAnimation: true,     // reset animation on end (default is true)
+        }
+    );
+    wow.init();
+
+</script>
+</body>
+</html>
