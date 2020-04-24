@@ -1,0 +1,136 @@
+.product {
+	position: relative;
+	overflow: hidden;
+
+	&__row {
+		@include container($wrap-content);
+		@include space-between();
+		align-items: stretch;
+		padding: 0 15px;
+	}
+	&__title {
+		text-align: center;
+		margin: 0px 0px 30px 0px;
+	}
+	&__items {
+		flex-basis: 48%;
+		margin: 0px 0px 50px 0px;
+		@include mmax(1144) {
+			padding: 30px 10px !important;
+		}
+		@include mmax(1004) {
+			flex-basis: 100%;
+		}
+	}
+}
+.prodcut-item {
+	@include space-between();
+	border-color: #ebebeb;
+	border-style: solid;
+	transition: 0.5s;
+	line-height: 1.55;
+	font-weight: 600;
+	border-width: 2px;
+	border-radius: 50px;
+	padding: 70px 20px;
+	&:hover {
+		border-color: #fff;
+		transform: scale(1.05);
+		background-color: #293363;
+		.prodcut-item__right-text {
+			.prodcut-item__characteristics-element {
+				color: $c-white;
+			}
+			.first-screen__btn {
+				border-color: $c-white;
+			}
+			.prodcut-item__btn {
+				border-color: $c-white;
+				color: $c-white;
+			}
+		}
+	}
+
+	&__images {
+		position: relative;
+		flex-basis: 40%;
+		@include mmax(465) {
+			flex-basis: 100%;
+			> img {
+				margin: 0 auto 20px;
+			}
+		}
+		> img {
+			@include adapt-img();
+			transform: scale(1.05);
+		}
+	}
+
+	&__right-text {
+		flex-basis: calc(100% - 42%);
+		@include mmax(465) {
+			flex-basis: 100%;
+			text-align: center;
+		}
+	}
+
+	&__characteristics-element {
+		color: #000000;
+		font-size: rem(12);
+		line-height: 1.7;
+		font-weight: 400;
+		margin: 0;
+
+		span {
+			font-weight: 700;
+		}
+	}
+
+	&__characteristics-element--gold {
+		color: #d6b56e;
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+
+	&__btn {
+		margin-top: 20px !important;
+		@include mmax(465) {
+			margin: 0 auto !important;
+		}
+	}
+	.first-screen__btn {
+		height: 50px;
+		width: 180px;
+		margin-top: 20px;
+		@include mmax(465) {
+			margin: 0 auto !important;
+		}
+	}
+}
+.price {
+	color: #d6b56e;
+	font-size: rem(22);
+	line-height: 1.7;
+	font-weight: 700;
+	margin: 10px 0;
+}
+.btn-default {
+	margin: 0;
+	width: 180px;
+	height: 50px;
+	color: #293363;
+	font-size: 14px;
+	font-family: "Comfortaa", Arial, sans-serif;
+	line-height: 1.55;
+	font-weight: 600;
+	border-width: 1px;
+	border-radius: 30px;
+	text-decoration: none;
+	border: 1px solid #292929;
+	@include flc-center-center();
+	transition: 0.5s;
+	&:hover {
+		background-color: #293363;
+		color: $c-white;
+	}
+}

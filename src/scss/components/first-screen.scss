@@ -253,7 +253,7 @@
     flex-basis: 30%;
   }
   .first-screen__column:nth-child(3){
-    flex-basis: 100% !important;
+	 flex-basis: 100% !important;
   }
 }
 @include mmax(410){

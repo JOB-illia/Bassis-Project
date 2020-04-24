@@ -1,19 +1,437 @@
 {% include "html/_document-header.html" %}
 
 <div class="workspace">
-    <div class="workspace__cont">
-        <div class="workspace__header">
-            {% include "html/header.html" %}
-        </div>
-        <main class="workspace__content">
-            {% include "html/content.html" %}
-        </main>
-        <div class="workspace__footer">
-            {% include "html/footer.html" %}
-        </div>
+	<div class="workspace__cont">
+		<div class="workspace__header">
+			{% include "html/header.html" %}
+		</div>
+		<main class="workspace__content">
+			<section class="first-screen">
+				<img src="img/Vector_1.svg" alt="" class="first-screen__background">
+				<div class="first-screen__row">
+					<div class="first-screen__left">
+						<h1 data-wow-duration="2s" class="h150 wow fadeInLeftBig">Pozbaw swój dom od <span>nieprzyjemnego
+								zapachu</span></h1>
+						<div class="first-screen__mobile">
+							<div class="first-screen__mobile-left">
+								<div class="first-screen__row-list">
+									<div data-wow-duration="2s" data-wow-delay=".3s" class="wow fadeInLeftBig first-screen__column">
+										<div class="first-screen__mini-icon">
+											<i class="icon-hand-up"></i>
+										</div>
+										<div class="first-screen__description-text">
+											Wolno spłukać do toalety
+										</div>
+									</div>
+									<div data-wow-duration="2s" data-wow-delay=".5s" class="wow fadeInLeftBig first-screen__column">
+										<div class="first-screen__mini-icon">
+											<i class="icon-coin"></i>
+										</div>
+										<div class="first-screen__description-text">
+											Paczki starcza na 2 tygodni
+										</div>
+									</div>
+									<div data-wow-duration="2s" data-wow-delay=".7s" class="wow fadeInLeftBig first-screen__column">
+										<div class="first-screen__mini-icon">
+											<i class="icon-hand-box"></i>
+										</div>
+										<div class="first-screen__description-text">
+											Darmowa dostawa kurierem bezpośrednio do domu*
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class=" first-screen__mobile-right">
+								<img src="img/photo.png" alt="">
+							</div>
+							<a data-wow-duration="2s" data-wow-delay=".3s" href="#" class="wow fadeInLeftBig first-screen__btn">Сhcę
+								zamówić!</a>
+							<div class="first-screen__column first-screen__column--width first-screen__column--hidden">
+								<div class="first-screen__mini-icon">
+									<i class="icon-check-mark"></i>
+								</div>
+								<div class="first-screen__description-text">
+									spróbuj żwirek silikonowy dla kota jedynie za 12,99 za opakowanie
+								</div>
+							</div>
+							<span data-wow-duration="2s" data-wow-delay=".3s" class="wow fadeInLeftBig  first-screen__mini-text">* -
+								Dostawa GRATIS przy zakupie od 8 opakowań</span>
+
+						</div>
+					</div>
+					<div class="first-screen__right">
+						<img src="img/Vector_1.svg" alt="" class="background">
+						<div data-wow-duration="2s" class="first-screen__big-bg wow fadeInRightBig">
+							<img src="img/photo.png" alt="">
+						</div>
+						<div class="first-screen__column first-screen__column--width">
+							<div data-wow-duration="2s" data-wow-delay=".3s" class="first-screen__mini-icon wow fadeInRightBig">
+								<i class="icon-check-mark"></i>
+							</div>
+							<div data-wow-duration="2s" data-wow-delay=".3s" class="first-screen__description-text wow fadeInLeftBig">
+								spróbuj żwirek silikonowy dla kota jedynie za 12,99 za opakowanie
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="about-list">
+				<img data-wow-duration="1.5s" src="img/kat.png" alt="" class="about-list__images wow fadeInRightBig">
+				<h2 data-wow-duration="1.5s" class="about-list__title h240 wow fadeInLeftBig">Czemu ponad 10 000 właścicieli
+					kotów
+					wybiera Barissa</h2>
+				<div class="about-list__row">
+					<div data-wow-delay=".1s" class="wow fadeInUp about-list__column items-list">
+						<div class="items-list__icon">
+							<img src="i/icon-bg.svg" alt="" class="icon-bg">
+							<i class="icon-cat-love"></i>
+						</div>
+						<div class="items-list__text">
+							<p class="text-title t18">Koty uwielbiają Barissę!</p>
+							<p class="text-description text-default14">99% właścicieli kotów twierdzą, że ich podopieczni wyraziły
+								zadowolenie ze żwirka Barissa</p>
+						</div>
+					</div>
+					<div data-wow-delay=".3s" class="wow fadeInUp about-list__column items-list">
+						<div class="items-list__icon">
+							<img src="i/icon-bg.svg" alt="" class="icon-bg">
+							<i class="icon-nose"></i>
+						</div>
+						<div class="items-list__text">
+							<p class="text-title t18">Pochłania nieprzyjemne zapachy</p>
+							<p class="text-description text-default14">Zapomnij o nieprzyjemnych zapachach w domu. Żwirek Barissa
+								posiada 5% dodatku pochłaniającego nieprzyjemne zapachy</p>
+						</div>
+					</div>
+					<div data-wow-delay=".5s" class="wow fadeInUp about-list__column items-list">
+						<div class="items-list__icon">
+							<img src="i/icon-bg.svg" alt="" class="icon-bg">
+							<i class="icon-man"></i>
+						</div>
+						<div class="items-list__text">
+							<p class="text-title t18">Hipoalergiczny</p>
+							<p class="text-description text-default14">Żwirek silikonowy Barissa jest całkowicie neutralny dla
+								środowiska i hipoalergiczny</p>
+						</div>
+					</div>
+					<div data-wow-delay=".6s" class="wow fadeInUp about-list__column items-list">
+						<div class="items-list__icon">
+							<img src="i/icon-bg.svg" alt="" class="icon-bg">
+							<i class="icon-percent"></i>
+						</div>
+						<div class="items-list__text">
+							<p class="text-title t18">Najlepszy wybór</p>
+							<p class="text-description text-default14">Budujemy trwałe relacje z naszymi Klientami, zapewniamy
+								najlepsze
+								stałe ceny</p>
+						</div>
+					</div>
+					<div data-wow-delay=".7s" class="wow fadeInUp about-list__column items-list">
+						<div class="items-list__icon">
+							<img src="i/icon-bg.svg" alt="" class="icon-bg">
+							<i class="icon-hand-up"></i>
+						</div>
+						<div class="items-list__text">
+							<p class="text-title t18">Komfort przy użyciu</p>
+							<p class="text-description text-default14">Wystarczy raz dziennie rozprowadzić żwirek równomiernie w
+								kuwecie, zaś raz w tygodniu całkowicie wymienić żwirek na nowy.</p>
+						</div>
+					</div>
+					<div data-wow-delay=".8s" class="wow fadeInUp about-list__column items-list">
+						<div class="items-list__icon">
+							<img src="i/icon-bg.svg" alt="" class="icon-bg">
+							<i class="icon-car"></i>
+						</div>
+						<div class="items-list__text">
+							<p class="text-title t18">Komfort zamawiania</p>
+							<p class="text-description text-default14">Wyślemy żwirek bezpośrednio na Twój adres, a kiedy on się
+								skończy, nie będziesz musiał robić nic. <span>Zrobimy wszystko za Ciebie - zadzwonimy, potwierdzimy nowe
+									zamówienie i wyślemy go ponownie.</span></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="facts" id="facts">
+				<p class="h240 facts__title">8 faktów o Barissa</p>
+				<div class="facts__atom"><img src="i/atom2.png" alt=""></div>
+				<div class="facts__row">
+					<div class="facts__column">
+						<div data-wow-duration="2s" class="wow fadeInLeftBig facts__images">
+							<img src="img/img1.jpg" alt="">
+						</div>
+						<div class="facts__facts">
+							<i class="icon-eco"></i>
+							<p class="text-default14">Ma prawie taki sam skład, jak piasek. Dzięki czemu jest hipoalergicznym
+								produktem,
+								przyjaznym dla środowiska <span>Jednorodny absorbent naturalnego pochodzenia, którym są wysuszone
+									granulki przezroczysto-białego koloru.</span></p>
+						</div>
+					</div>
+					<div class="facts__column facts__column--refresh">
+						<div class="wow fadeInRightBig facts__images">
+							<img src="img/img2.jpg" alt="">
+						</div>
+						<div class="facts__facts">
+							<i class="icon-hand-up"></i>
+							<p class="text-default14">Granulki nie kleją się do łap zwierzaka i podłoga pozostaje maksymalna
+								maksymalnie
+								czysta</p>
+						</div>
+					</div>
+					<div class="facts__column">
+						<div class="wow fadeInLeftBig facts__images">
+							<img src="img/img3.jpg" alt="">
+						</div>
+						<div class="facts__facts">
+							<i class="icon-cat-love"></i>
+							<p class="text-default14">Przy kontakcie z wilgocią nie wydziela żadnych szkodliwych elementów, dzięki
+								czemu
+								jest w 100% bezpieczny dla twojego kota</p>
+						</div>
+					</div>
+					<div class="facts__column facts__column--refresh">
+						<div class="wow fadeInRightBig facts__images">
+							<img src="img/img4.jpg" alt="">
+							<i class="icon-close"></i>
+						</div>
+						<div class="facts__facts">
+							<i class="icon-nose"></i>
+							<p class="text-default14">Idealnie pochłania zapachy dzięki 5% dodatku z błękitnych kryształów. W
+								pomieszczeniu nie będzie nieprzyjemnych zapachów.</p>
+						</div>
+					</div>
+					<div class="facts__column">
+						<div class="wow fadeInLeftBig facts__images">
+							<img src="img/img5.jpg" alt="">
+						</div>
+						<div class="facts__facts">
+							<i class="icon-toilet"></i>
+							<p class="text-default14">Żwirek Barissa wolno spłukać do toalety, ale nie jest zalecane spłukiwanie do
+								zlewu.</p>
+						</div>
+					</div>
+					<div class="facts__column facts__column--refresh">
+						<div class="wow fadeInRightBig facts__images">
+							<img src="img/img6.jpg" alt="">
+						</div>
+						<div class="facts__facts">
+							<i class="icon-dust"></i>
+							<p class="text-default14">Nie kurzy się - w porównaniu do innych żwirków posiada na 99% mniej cząsteczek
+								pyłu.</p>
+						</div>
+					</div>
+					<div class="facts__column">
+						<div class="wow fadeInLeftBig facts__images">
+							<img src="img/img7.jpg" alt="">
+						</div>
+						<div class="facts__facts">
+							<i class="icon-calendar"></i>
+							<p class="text-default14">Praktyczny w zastosowaniu - wystarczy raz w tygodniu oczyścić kuwetę I wsypać
+								nowy
+								żwirek.</p>
+						</div>
+					</div>
+					<div class="facts__column facts__column--refresh">
+						<div class="wow fadeInRightBig facts__images">
+							<img src="img/img8.jpg" alt="">
+							<i class="icon-close"></i>
+						</div>
+						<div class="facts__facts">
+							<i class="icon-virus"></i>
+							<p class="text-default14">Ze względu na swój charakter nie ma warunków do rozprzestrzeniania się pleśni i
+								bakterii, w przeciwieństwie do innych rodzajów wypełniaczy</p>
+						</div>
+					</div>
 
 
-    </div>
+				</div>
+			</section>
+			<section class="about-list">
+				<h2 data-wow-duration="1.5s" class="about-list__title h240 wow fadeInLeftBig">Czemu ponad 10 000 właścicieli
+					kotów
+					wybiera Barissa</h2>
+				<div class="about-list__row">
+					<div data-wow-delay=".1s" class="wow fadeInUp about-list__column items-list">
+						<div class="items-list__icon">
+							<img src="i/icon-bg.svg" alt="" class="icon-bg">
+							<i class="icon-top"></i>
+						</div>
+						<div class="items-list__text">
+							<p class="text-title t18">Koty uwielbiają Barissę!</p>
+							<p class="text-description text-default14">99% właścicieli kotów twierdzą, że ich podopieczni wyraziły
+								zadowolenie ze żwirka Barissa</p>
+						</div>
+					</div>
+					<div data-wow-delay=".3s" class="wow fadeInUp about-list__column items-list">
+						<div class="items-list__icon">
+							<img src="i/icon-bg.svg" alt="" class="icon-bg">
+							<i class="icon-freelancer"></i>
+						</div>
+						<div class="items-list__text">
+							<p class="text-title t18">Pochłania nieprzyjemne zapachy</p>
+							<p class="text-description text-default14">Zapomnij o nieprzyjemnych zapachach w domu. Żwirek Barissa
+								posiada 5% dodatku pochłaniającego nieprzyjemne zapachy</p>
+						</div>
+					</div>
+					<div data-wow-delay=".5s" class="wow fadeInUp about-list__column items-list">
+						<div class="items-list__icon">
+							<img src="i/icon-bg.svg" alt="" class="icon-bg">
+							<i class="icon-money"></i>
+						</div>
+						<div class="items-list__text">
+							<p class="text-title t18">Hipoalergiczny</p>
+							<p class="text-description text-default14">Żwirek silikonowy Barissa jest całkowicie neutralny dla
+								środowiska i hipoalergiczny</p>
+						</div>
+					</div>
+					<div data-wow-delay=".6s" class="wow fadeInUp about-list__column items-list">
+						<div class="items-list__icon">
+							<img src="i/icon-bg.svg" alt="" class="icon-bg">
+							<i class="icon-bubbles_1"></i>
+						</div>
+						<div class="items-list__text">
+							<p class="text-title t18">Najlepszy wybór</p>
+							<p class="text-description text-default14">Budujemy trwałe relacje z naszymi Klientami, zapewniamy
+								najlepsze
+								stałe ceny</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="product">
+				<p data-wow-duration="2s" class="wow fadeInLeft product__title h240">Wybierz wielkość opakowania</p>
+				<div class="product__row">
+					<div data-wow-delay=".1s" class="wow fadeInUp product__items prodcut-item">
+						<div class="prodcut-item__images">
+							<img src="img/box1.png" alt="">
+						</div>
+						<div class="prodcut-item__right-text">
+							<p class="prodcut-item__characteristics-element">
+								<span>Objętość:</span>
+								1 opakowanie 3,8L
+							</p>
+							<p class="prodcut-item__characteristics-element">
+								<span>Wystarczy:</span>
+								do 1,5 tygodnia
+							</p>
+							<p class="prodcut-item__characteristics-element">
+								<span>Rodzaj:</span>
+								żwirek silikonowy
+							</p>
+							<p class="prodcut-item__characteristics-element">
+								<span>Kolor:</span>
+								przezroczysto-biały z błękitnym dodatkiem
+							</p>
+							<p class="prodcut-item__characteristics-element prodcut-item__characteristics-element--gold">
+								<span>Dostawa:</span>
+								13,99 złotych kurier
+							</p>
+							<p class="price">12,99 złotych</p>
+							<a href="#" class="first-screen__btn">Chcę spróbować</a>
+						</div>
+
+
+					</div>
+					<div data-wow-delay=".3s" class="wow fadeInUp product__items prodcut-item">
+						<div class="prodcut-item__images">
+							<img src="img/box2.png" alt="">
+						</div>
+						<div class="prodcut-item__right-text">
+							<p class="prodcut-item__characteristics-element">
+								<span>Objętość:</span>
+								1 opakowanie 3,8L
+							</p>
+							<p class="prodcut-item__characteristics-element">
+								<span>Wystarczy:</span>
+								do 1,5 tygodnia
+							</p>
+							<p class="prodcut-item__characteristics-element">
+								<span>Rodzaj:</span>
+								żwirek silikonowy
+							</p>
+							<p class="prodcut-item__characteristics-element">
+								<span>Kolor:</span>
+								przezroczysto-biały z błękitnym dodatkiem
+							</p>
+							<p class="prodcut-item__characteristics-element prodcut-item__characteristics-element--gold">
+								<span>Dostawa:</span>
+								13,99 złotych kurier
+							</p>
+							<p class="price">12,99 złotych</p>
+							<a href="#" class="prodcut-item__btn btn-default">Chcę spróbować</a>
+						</div>
+
+
+					</div>
+					<div data-wow-delay=".4s" class="wow fadeInUp product__items prodcut-item">
+						<div class="prodcut-item__images">
+							<img src="img/box2.png" alt="">
+						</div>
+						<div class="prodcut-item__right-text">
+							<p class="prodcut-item__characteristics-element">
+								<span>Objętość:</span>
+								1 opakowanie 3,8L
+							</p>
+							<p class="prodcut-item__characteristics-element">
+								<span>Wystarczy:</span>
+								do 1,5 tygodnia
+							</p>
+							<p class="prodcut-item__characteristics-element">
+								<span>Rodzaj:</span>
+								żwirek silikonowy
+							</p>
+							<p class="prodcut-item__characteristics-element">
+								<span>Kolor:</span>
+								przezroczysto-biały z błękitnym dodatkiem
+							</p>
+							<p class="prodcut-item__characteristics-element prodcut-item__characteristics-element--gold">
+								<span>Dostawa:</span>
+								13,99 złotych kurier
+							</p>
+							<p class="price">12,99 złotych</p>
+							<a href="#" class="prodcut-item__btn btn-default">Chcę spróbować</a>
+						</div>
+
+
+					</div>
+					<div data-wow-delay=".5s" class="wow fadeInUp product__items prodcut-item">
+						<div class="prodcut-item__images">
+							<img src="img/box4.png" alt="">
+						</div>
+						<div class="prodcut-item__right-text">
+							<p class="prodcut-item__characteristics-element">
+								<span>Objętość:</span>
+								1 opakowanie 3,8L
+							</p>
+							<p class="prodcut-item__characteristics-element">
+								<span>Wystarczy:</span>
+								do 1,5 tygodnia
+							</p>
+							<p class="prodcut-item__characteristics-element">
+								<span>Rodzaj:</span>
+								żwirek silikonowy
+							</p>
+							<p class="prodcut-item__characteristics-element">
+								<span>Kolor:</span>
+								przezroczysto-biały z błękitnym dodatkiem
+							</p>
+							<p class="prodcut-item__characteristics-element prodcut-item__characteristics-element--gold">
+								<span>Dostawa:</span>
+								13,99 złotych kurier
+							</p>
+							<p class="price">12,99 złotych</p>
+							<a href="#" class="prodcut-item__btn btn-default">Chcę spróbować</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div class="workspace__footer">
+
+			{% include "html/footer.html" %}
+
+
+		</div>
+	</div>
 </div>
-
 {% include "html/_document-footer.html" %}
