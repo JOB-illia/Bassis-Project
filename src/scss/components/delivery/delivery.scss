@@ -1,0 +1,152 @@
+.delivery {
+	margin-top: 100px;
+	background: $c-blue;
+	padding: 100px 0;
+	margin-bottom: -90px;
+
+	// .delivery__body
+	&__body {
+		@include container($wrap-content);
+		padding: 0 15px;
+	}
+
+	// .delivery__title
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	// .delivery__row
+
+	&__row {
+		@include space-between();
+		align-items: stretch;
+		padding: 40px;
+		background: $c-white;
+		border-radius: 50px;
+		margin-bottom: 50px;
+	}
+
+	// .delivery__column
+
+	&__column {
+		flex-basis: 49%;
+		@include space-between();
+	}
+
+	// .delivery__text-right
+
+	&__text-right {
+		flex-basis: calc(100% - 70px);
+	}
+
+	// .delivery__text
+
+	&__text {
+		margin-bottom: 20px !important;
+		span {
+			font-weight: bold;
+		}
+	}
+
+	// .delivery__sub-text
+
+	&__sub-text {
+		color: $c-black;
+		font-size: rem(14);
+		font-family: "Comfortaa", Arial, sans-serif;
+		line-height: 1.55;
+		font-weight: 400;
+		opacity: 0.8;
+	}
+
+	// .delivery__gwarancje
+
+	&__gwarancje {
+		@include space-between();
+		align-items: flex-start;
+	}
+
+	&__gwarancje-column {
+		flex-basis: 45%;
+	}
+
+	// .delivery__sub-title
+
+	&__sub-title {
+		flex-basis: 100%;
+	}
+
+	// .delivery__exclamation
+
+	&__exclamation {
+		flex-basis: 40%;
+		@include flc-start();
+		align-items: stretch;
+		margin-top: 0;
+
+		span {
+			flex-basis: calc(100% - 60px);
+			margin-left: 10px;
+		}
+	}
+	@include mmax(900) {
+		&__column {
+			flex-basis: 100%;
+			margin-bottom: 20px;
+		}
+		&__gwarancje-column {
+			flex-basis: 100%;
+			margin-bottom: 20px;
+		}
+		&__exclamation {
+			flex-basis: 100%;
+		}
+	}
+	@include mmax(600) {
+		padding: 20px 0;
+	}
+	@include mmax(450) {
+		&__column {
+			> p {
+				flex-basis: 100%;
+				> i {
+					margin: 0px auto;
+				}
+			}
+		}
+		&__text-right {
+			flex-basis: 100%;
+		}
+		&__sub-title {
+			margin-top: 0;
+		}
+	}
+}
+.icon-free {
+	@include icon(50px, 50px, "free.svg");
+	display: block;
+}
+.icon-delivery {
+	@include icon(50px, 50px, "delivery.svg");
+	display: block;
+}
+.h330 {
+	color: $c-black;
+	font-size: rem(30);
+	font-family: "Comfortaa", Arial, sans-serif;
+	line-height: 1.55;
+	font-weight: 300;
+}
+.text-default16 {
+	color: $c-black;
+	font-size: rem(16);
+	font-family: "Comfortaa", Arial, sans-serif;
+	line-height: 1.7;
+	font-weight: 400;
+	margin: 0;
+}
+.icon-exclamation {
+	@include icon(50px, 50px, "attention.svg");
+	display: block;
+}

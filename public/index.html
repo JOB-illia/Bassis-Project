@@ -460,19 +460,70 @@
 						</div>
 					</div>
 				</div>
+				<a href="catalog.html" class="first-screen__btn product__btn--center">Wszystkie produkty</a>
 			</section>
 		</main>
 		<div class="workspace__footer">
 
 			<footer class="footer">
-    footer
-</footer>
+	<div class="footer__row">
+		<div class="footer__left">
+			<a href="#" class="footer__logo"><i class="icon-logotype"></i></a>
+			<div class="footer__contact">
+				<p>Bee Digital Sp. z o.o.</p>
+				<p>ul. Towarowa 35/49</p>
+				<p>00-869 Warszawa</p>
+				<p>NIP: 7010417805</p>
+			</div>
+		</div>
+		<div class="footer__right-menu">
+			<ul class="footer__menu">
+				<li><a href="#">Katalog</a></li>
+				<li><a href="#">Dostawa</a></li>
+				<li><a href="#">Recenzje</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Regulamin</a></li>
+				<li><a href="#">Kontakt</a></li>
+			</ul>
+		</div>
 
+	</div>
+
+</footer>
 
 
 		</div>
 	</div>
 </div>
+<script>
+	let boxContainer = document.getElementById('facts'),
+			boxContainerItems = document.querySelectorAll('.facts__column');
+		function returnLastArr(arr) {
+			return arr[arr.length - 1];
+		}
+		let lastBox = returnLastArr(boxContainerItems);
+		if (window.screen.availWidth > 1200) {
+			window.addEventListener('scroll', () => {
+				function fixedContainer() {
+					if (boxContainer.getBoundingClientRect().top <= 90) {
+						boxContainer.classList.add('active-fixed');
+					} else {
+						boxContainer.classList.remove('active-fixed');
+					}
+				}
+				fixedContainer();
+				function endFixedContainer() {
+					if (lastBox.getBoundingClientRect().top <= 250) {
+						boxContainer.classList.remove('active-fixed');
+						boxContainer.classList.add('active-end');
+					} else {
+						boxContainer.classList.remove('active-end');
+					}
+				}
+				endFixedContainer();
+			});
+		}
+</script>
 <script src="js/main.js"></script>
 <script src="js/wow.js"></script>
 <script>

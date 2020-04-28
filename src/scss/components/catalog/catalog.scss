@@ -1,0 +1,122 @@
+.catalog {
+	position: relative;
+	overflow: hidden;
+	margin-top: rem(130);
+	padding: rem(20) rem(30);
+	@include mmax(414) {
+		padding: rem(10) rem(15);
+		margin-top: 80px;
+	}
+	&__row {
+		@include space-between();
+		align-items: flex-start;
+	}
+	&__filter {
+		flex-basis: 25%;
+		padding: 30px;
+		align-items: center;
+		flex-wrap: wrap;
+		border-color: #ebebeb;
+		border-style: solid;
+		border-width: 2px;
+		border-radius: 24px;
+		@include mmax(1255) {
+			flex-basis: 15%;
+		}
+		@include mmax(1037) {
+			flex-basis: 18%;
+		}
+		@include mmax(592) {
+			flex-basis: 100%;
+			margin-bottom: 20px;
+			padding: 10px 20px;
+			@include flc-start();
+			align-items: stretch;
+		}
+	}
+
+	&__filter-elem {
+		margin: 0px 0px 30px 0px;
+		@include mmax(592) {
+			margin-right: 20px;
+		}
+	}
+
+	&__fitler-title {
+		color: #d6b56e;
+		font-size: rem(22);
+		line-height: 1.7;
+		font-weight: 700;
+		margin: 0px 0px 10px;
+	}
+
+	&__filter-item {
+		@include flc-start();
+		color: #000000;
+		font-size: rem(12);
+		line-height: 1.7;
+		margin: 0px 0px 0px 0px;
+		font-weight: 700;
+		transition: 0.5s;
+		cursor: pointer;
+		&:hover {
+			color: $c-hover;
+		}
+	}
+	.catalog__filter-item--active {
+		.catalog__chekbox {
+			position: relative;
+			&::before {
+				opacity: 1;
+				visibility: visible;
+				content: url(../i/tick.svg);
+			}
+		}
+	}
+	&__chekbox {
+		width: 15px;
+		height: 15px;
+		border: 1px solid $c-black;
+		margin: 0px 20px 0px 0px;
+		&::before {
+			transition: 0.5s;
+			content: url(../i/tick.svg);
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&__items {
+		flex-basis: 74%;
+		@include space-between();
+		align-items: stretch;
+		@include mmax(1255) {
+			flex-basis: 84%;
+		}
+		@include mmax(1037) {
+			flex-basis: 80%;
+		}
+		@include mmax(882) {
+			flex-basis: 70%;
+		}
+		@include mmax(592) {
+			flex-basis: 100%;
+		}
+	}
+	&__items-item {
+		margin-bottom: 15px !important;
+		transition: 0.5s;
+		@include mmax(1037) {
+			flex-basis: 100%;
+			margin: 0px auto;
+		}
+	}
+}
+._hide {
+	opacity: 0;
+	visibility: hidden !important;
+}
+._show {
+	opacity: 1;
+	visibility: visible !important;
+}

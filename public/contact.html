@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Артика</title>
+  
+
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="workspace">
+	<div class="workspace__cont">
+		<div class="workspace__header">
+			<header class="header">
+    <div class="header__row">
+        <a href="#" class="header__logo">
+            <i class="icon-logotype"></i>
+            <p>Żwirek silikonowy dla kota</p>
+        </a>
+        <nav class="header__nav">
+            <ul class="menu">
+                <li class="li-anim"><a href="#">Katalog</a></li>
+                <li class="li-anim"><a href="#">Dostawa</a></li>
+                <li class="li-anim"><a href="#">Recenzje</a></li>
+                <li class="li-anim"><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="header__basket">
+            <a href="#"><i class="icon-basket"></i></a>
+            <div class="burger">
+                <i class="icon-burger"></i>
+                <i class="icon-burger"></i>
+                <i class="icon-burger"></i>
+            </div>
+
+        </div>
+    </div>
+</header>
+		</div>
+		<main class="workspace__content">
+			<section class="contact">
+				<div class="contact__body">
+					<h2 class="h150">contact</h2>
+					<div class="contact__row">
+						<div class="contact__column">
+							<div class="footer__left">
+								<a href="#" class="footer__logo"><i class="icon-logotype"></i></a>
+								<div class="footer__contact">
+									<p>Bee Digital Sp. z o.o.</p>
+									<p>ul. Towarowa 35/49</p>
+									<p>00-869 Warszawa</p>
+									<p>NIP: 7010417805</p>
+								</div>
+							</div>
+						</div>
+						<div class="contact__column">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.445640530196!2d20.977934415680963!3d52.2352887650423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8257c262fd%3A0xfd8bc846e8b54e7f!2sTowarowa%2035%2C%2000-869%20Warszawa!5e0!3m2!1sru!2spl!4v1587998488558!5m2!1sru!2spl"
+								width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+								tabindex="0"></iframe>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+		</main>
+		<div class="workspace__footer">
+
+			<footer class="footer">
+	<div class="footer__row">
+		<div class="footer__left">
+			<a href="#" class="footer__logo"><i class="icon-logotype"></i></a>
+			<div class="footer__contact">
+				<p>Bee Digital Sp. z o.o.</p>
+				<p>ul. Towarowa 35/49</p>
+				<p>00-869 Warszawa</p>
+				<p>NIP: 7010417805</p>
+			</div>
+		</div>
+		<div class="footer__right-menu">
+			<ul class="footer__menu">
+				<li><a href="#">Katalog</a></li>
+				<li><a href="#">Dostawa</a></li>
+				<li><a href="#">Recenzje</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Regulamin</a></li>
+				<li><a href="#">Kontakt</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+</footer>
+
+
+		</div>
+	</div>
+</div>
+<script src="js/main.js"></script>
+<script src="js/wow.js"></script>
+<script>
+    var wow = new WOW(
+        {
+            boxClass:     'wow',      // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset:       -100,          // distance to the element when triggering the animation (default is 0)
+            mobile:       false,       // trigger animations on mobile devices (default is true)
+            live:         true,       // act on asynchronously loaded content (default is true)
+            callback:     function(box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null,    // optional scroll container selector, otherwise use window,
+            resetAnimation: true,     // reset animation on end (default is true)
+        }
+    );
+    wow.init();
+
+</script>
+</body>
+</html>

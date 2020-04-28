@@ -1,0 +1,403 @@
+.basket {
+	position: relative;
+	overflow: hidden;
+	margin-top: 100px;
+	padding-bottom: 50px;
+
+	// .basket__body
+
+	&__body {
+		@include container($wrap-content);
+		padding: 0 15px;
+	}
+
+	// .basket__title
+
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	// .basket__row
+
+	&__row {
+		@include space-between();
+		align-items: stretch;
+	}
+
+	// .basket__column
+
+	&__column {
+		flex-basis: calc(100% / 3.1);
+		border: 1px solid $c-border;
+		border-radius: 5px;
+	}
+
+	// .basket__icon
+
+	&__icon {
+		height: 60px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 0 15px;
+		width: 100%;
+		border-bottom: 1px solid $c-border;
+		> i {
+			margin-right: 20px;
+			width: 30px;
+			height: 30px;
+		}
+		> p {
+			color: #314762;
+			font-family: Arial;
+			font-size: 18px;
+			font-weight: bold;
+		}
+	}
+
+	// .basket__name
+
+	&__name {
+		padding: 5px 20px;
+		@include space-between();
+		margin: 0px;
+		border-bottom: 1px solid $c-border;
+		color: $c-boldBlue;
+		span {
+			font-weight: bold;
+			color: $c-black;
+		}
+	}
+
+	// .basket__radio
+
+	&__radio {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		min-height: 50px;
+		margin-bottom: 10px;
+		padding-right: 5px;
+		&:nth-child(3) {
+			margin-bottom: 40px;
+			border-bottom: 1px solid $c-border;
+			padding-bottom: 15px;
+		}
+		> .radio {
+			@include full-abs();
+			left: -99999999%;
+			top: -9999999999%;
+		}
+		> label {
+			flex-basis: calc(100%);
+			@include flc-start();
+			padding-left: 40px;
+			position: relative;
+			cursor: pointer;
+			> i {
+				margin-right: 10px;
+			}
+			&::before {
+				content: "";
+				@include full-abs();
+				margin: auto;
+				right: auto;
+				left: 10px;
+				box-shadow: 0 0 0 1px #e0e0e0;
+				width: 15px;
+				height: 15px;
+				border: 1px solid $c-border;
+				border-radius: 50%;
+			}
+			&::after {
+				content: "";
+				@include full-abs();
+				margin: auto;
+				right: auto;
+				left: 12px;
+				width: 13px;
+				opacity: 0;
+				visibility: hidden;
+				transition: 0.5s;
+				height: 13px;
+				border-radius: 50%;
+				background: #f25b2a;
+			}
+		}
+		.radio:checked + label {
+			&::after {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	// .basket__input
+
+	&__input {
+		width: 125%;
+		display: inline-block;
+		height: 33px;
+		vertical-align: middle;
+		margin-top: 5px;
+		border-radius: 3px;
+		border: 1px solid $c-border;
+		padding: 5px;
+		font-size: 0.85em;
+		color: #333333;
+		outline: none;
+	}
+
+	// .basket__product
+
+	&__product {
+		padding: 0px 0px 20px;
+		@include space-between();
+		border-bottom: 1px solid $c-border;
+	}
+
+	// .basket__product-img
+
+	&__product-img {
+		width: 30%;
+		padding: 0px 0px 30% 0px;
+		position: relative;
+		> img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	// .basket__product-name
+
+	&__product-name {
+		flex-basis: 40%;
+		font-size: rem(12);
+		color: $c-black;
+		line-height: rem(20);
+	}
+
+	// .basket__product-price
+
+	&__product-price {
+		font-size: rem(14);
+		font-weight: bold;
+		color: $c-boldBlue;
+	}
+
+	// .basket__final
+
+	&__final {
+		padding: 30px 10px 0;
+		border-bottom: 1px solid $c-border;
+		> p {
+			@include space-between();
+			align-items: stretch;
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+
+	// .basket__final-price
+
+	&__final-price {
+	}
+	&__check {
+		@include space-between();
+		padding: 20px;
+		border-bottom: 1px solid $c-border;
+		> p {
+			margin: 0;
+
+			font-size: rem(18);
+			font-weight: bold;
+			span {
+				color: #f25b2a;
+			}
+		}
+	}
+	// .basket__checkbox
+
+	&__checkbox {
+		margin-bottom: 10px;
+		padding: 10px;
+		> input {
+			opacity: 0;
+			position: absolute;
+			top: -999999%;
+			left: -1000000px;
+		}
+		> label {
+			font-size: rem(12);
+			margin: 0;
+			padding-left: 30px;
+			line-height: rem(20);
+			position: relative;
+			cursor: pointer;
+			&::before {
+				content: "";
+				@include full-abs();
+				margin: auto;
+				right: auto;
+				left: 0;
+				bottom: auto;
+				top: -5px;
+				width: 20px;
+				height: 20px;
+				border: 1px solid $c-border;
+				border-radius: 3px;
+			}
+			&::after {
+				content: url(../i/tick.svg);
+				@include full-abs();
+				margin: auto;
+				left: 0;
+				right: auto;
+				bottom: auto;
+				top: -5px;
+				transform: scale(0.8) translate(2px, 0px);
+				transform: 0.5s;
+				opacity: 0;
+				visibility: hidden;
+				width: 20px;
+				height: 20px;
+			}
+		}
+		> input:checked + label {
+			&::after {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+
+	// .basket__subcheck
+
+	&__subcheck {
+		font-size: rem(10);
+		margin-top: 30px;
+		padding-left: 20px;
+	}
+
+	// .basket__btn
+
+	&__btn {
+		background: #2ac17f;
+		border: medium none;
+		border-radius: 100px;
+		color: #fff !important;
+		overflow: hidden;
+		font-size: 1.154em;
+		font-weight: 400;
+		min-height: 43px;
+		letter-spacing: 0.04em;
+		line-height: unset;
+		padding: 10px 0;
+		text-transform: initial;
+		transition: all 0.2s ease-in 0s;
+		display: block;
+		width: 93%;
+		margin: 20px auto;
+		cursor: pointer;
+		&:hover {
+			background: darken(#2ac17f, 15%);
+		}
+	}
+	@include mmax(1155) {
+		&__column {
+			flex-basis: 48%;
+			margin-bottom: 20px;
+		}
+	}
+	@include mmax(775) {
+		&__column {
+			flex-basis: 100%;
+		}
+	}
+}
+.text-default16 {
+}
+.icon-basket {
+}
+.icon-home {
+}
+.icon-hand {
+}
+.icon-paylan {
+	@include icon(70px, 35px, "pay1.png");
+	display: block;
+}
+.icon-przelew {
+	@include icon(70px, 35px, "pay2.png");
+	display: block;
+}
+.icon-twisto {
+	@include icon(70px, 35px, "pay3.png");
+	display: block;
+}
+.icon-purse {
+	@include icon(70px, 35px, "pay5.png");
+	display: block;
+}
+.icon-DHL {
+	@include icon(70px, 35px, "pay6.gif");
+	display: block;
+}
+.icon-map {
+	@include icon(70px, 35px, "pay7.gif");
+	display: block;
+}
+.gratis {
+	white-space: nowrap;
+	text-align: right;
+	color: #344860;
+	font-size: 1em;
+	font-weight: bold;
+}
+.icon-calendar {
+}
+.bold {
+}
+.baket {
+	// .baket__chek
+
+	&__chek {
+	}
+}
+.check {
+	color: #f25b2a;
+	font-size: rem(24) !important;
+	margin: 0;
+}
+.btn-zanznach {
+	width: 80%;
+	height: 40px;
+	@include flc-center-center();
+	cursor: pointer;
+	text-transform: none;
+	font-size: 1.1em;
+	letter-spacing: 0.646px;
+	background: #f25b2a;
+	border: 1px solid #f25b2a;
+	color: #fff !important;
+	text-decoration: none;
+	font-size: 1em;
+	margin: 15px auto 20px;
+	display: block;
+	padding: 10px 17px;
+	font-weight: normal;
+	font-family: Lato, Arial;
+	overflow: visible;
+	text-align: center;
+	transition: ease 0.2s all;
+	border-radius: 36px;
+
+	&:hover {
+		background-color: darken(#f25b2a, 15%);
+	}
+}

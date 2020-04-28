@@ -424,6 +424,7 @@
 						</div>
 					</div>
 				</div>
+				<a href="catalog.html" class="first-screen__btn product__btn--center">Wszystkie produkty</a>
 			</section>
 		</main>
 		<div class="workspace__footer">
@@ -434,4 +435,33 @@
 		</div>
 	</div>
 </div>
+<script>
+	let boxContainer = document.getElementById('facts'),
+			boxContainerItems = document.querySelectorAll('.facts__column');
+		function returnLastArr(arr) {
+			return arr[arr.length - 1];
+		}
+		let lastBox = returnLastArr(boxContainerItems);
+		if (window.screen.availWidth > 1200) {
+			window.addEventListener('scroll', () => {
+				function fixedContainer() {
+					if (boxContainer.getBoundingClientRect().top <= 90) {
+						boxContainer.classList.add('active-fixed');
+					} else {
+						boxContainer.classList.remove('active-fixed');
+					}
+				}
+				fixedContainer();
+				function endFixedContainer() {
+					if (lastBox.getBoundingClientRect().top <= 250) {
+						boxContainer.classList.remove('active-fixed');
+						boxContainer.classList.add('active-end');
+					} else {
+						boxContainer.classList.remove('active-end');
+					}
+				}
+				endFixedContainer();
+			});
+		}
+</script>
 {% include "html/_document-footer.html" %}

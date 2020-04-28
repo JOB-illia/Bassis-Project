@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Артика</title>
+  
+
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="workspace">
+	<div class="workspace__cont">
+		<div class="workspace__header">
+			<header class="header">
+    <div class="header__row">
+        <a href="#" class="header__logo">
+            <i class="icon-logotype"></i>
+            <p>Żwirek silikonowy dla kota</p>
+        </a>
+        <nav class="header__nav">
+            <ul class="menu">
+                <li class="li-anim"><a href="#">Katalog</a></li>
+                <li class="li-anim"><a href="#">Dostawa</a></li>
+                <li class="li-anim"><a href="#">Recenzje</a></li>
+                <li class="li-anim"><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="header__basket">
+            <a href="#"><i class="icon-basket"></i></a>
+            <div class="burger">
+                <i class="icon-burger"></i>
+                <i class="icon-burger"></i>
+                <i class="icon-burger"></i>
+            </div>
+
+        </div>
+    </div>
+</header>
+		</div>
+		<main class="workspace__content">
+			<section class="reviews">
+				<div class="reviews__body">
+					<p class="reviews__title h240 wow fadeInLeftBig">Co myślą o żwirku Barissa<br /> inni właścicieli kotów?</p>
+					<div class="reviews__row">
+						<div class="reviews__left">
+							<img data-wow-delay="0.2s" class="wow fadeInLeft" src="img/r1.png" alt="">
+							<img data-wow-delay="0.4s" class="wow fadeInUp" src="img/r2.png" alt="">
+							<img data-wow-delay="0.6s" class="wow fadeInRight" src="img/r3.png" alt="">
+							<img data-wow-delay="0.8s" class="wow fadeInDown" src="img/r4.png" alt="">
+							<img data-wow-delay="1.1s" class="wow fadeInUp" src="img/r5.png" alt="">
+							<img data-wow-delay="1.2s" class="wow fadeInDown" src="img/r6.png" alt="">
+							<img data-wow-delay="1.4s" class="wow fadeInDown" src="img/r7.png" alt="">
+							<img data-wow-delay="1.5s" class="wow fadeInRight" src="img/r8.png" alt="">
+							<img data-wow-delay="1.6s" class="wow fadeInUp" src="img/r9.png" alt="">
+							<img data-wow-delay="1.7s" class="wow fadeInLeft" src="img/r10.png" alt="">
+						</div>
+						<div class="reviews__right">
+							<img src="img/rBig.png" alt="">
+						</div>
+					</div>
+					<a href="#" class="reviews__btn first-screen__btn">Zamawiam Barissę!</a>
+
+					<img src="i/cat.png" alt="" class="wow fadeInUpBig absolute-bg">
+				</div>
+			</section>
+
+		</main>
+		<div class="workspace__footer">
+
+			<footer class="footer">
+	<div class="footer__row">
+		<div class="footer__left">
+			<a href="#" class="footer__logo"><i class="icon-logotype"></i></a>
+			<div class="footer__contact">
+				<p>Bee Digital Sp. z o.o.</p>
+				<p>ul. Towarowa 35/49</p>
+				<p>00-869 Warszawa</p>
+				<p>NIP: 7010417805</p>
+			</div>
+		</div>
+		<div class="footer__right-menu">
+			<ul class="footer__menu">
+				<li><a href="#">Katalog</a></li>
+				<li><a href="#">Dostawa</a></li>
+				<li><a href="#">Recenzje</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Regulamin</a></li>
+				<li><a href="#">Kontakt</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+</footer>
+
+
+		</div>
+	</div>
+</div>
+<script src="js/main.js"></script>
+<script src="js/wow.js"></script>
+<script>
+    var wow = new WOW(
+        {
+            boxClass:     'wow',      // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset:       -100,          // distance to the element when triggering the animation (default is 0)
+            mobile:       false,       // trigger animations on mobile devices (default is true)
+            live:         true,       // act on asynchronously loaded content (default is true)
+            callback:     function(box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null,    // optional scroll container selector, otherwise use window,
+            resetAnimation: true,     // reset animation on end (default is true)
+        }
+    );
+    wow.init();
+
+</script>
+</body>
+</html>

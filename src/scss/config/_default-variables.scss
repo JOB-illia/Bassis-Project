@@ -1,10 +1,8 @@
 // Fonts
-$f-main: 'Comfortaa', cursive;
+$f-main: "Comfortaa", cursive;
 
 // Font sizes
 $fz-root: 15;
-
-
 
 //wrap content;
 $wrap-content: 1200px;
@@ -12,13 +10,22 @@ $wrap-content-mini: 1140px;
 // Colors
 $c-white: #ffffff;
 $c-black: #000000;
+$c-blue: #e7f1f5;
+$c-hover: #293363;
+$c-boldBlue: #293363;
+$c-gold: #d6b56e;
+$c-border: #ebebeb;
 
-
+$desctop: 1680;
+$laptop: 1024;
+$ipad: 1024;
+$mobile: 860;
+$mobile-l: 414;
 
 // Time
 $time-fast: 300ms;
 
 // Timing functions
 $timing-functions: (
-  'easeInOutCubic': cubic-bezier(0.645, 0.045, 0.355, 1)
+	"easeInOutCubic": cubic-bezier(0.645, 0.045, 0.355, 1),
 );

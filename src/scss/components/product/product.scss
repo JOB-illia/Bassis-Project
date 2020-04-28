@@ -1,0 +1,193 @@
+.product {
+	position: relative;
+	overflow: hidden;
+	margin-top: 100px;
+	// .product__body
+	&__body {
+		@include container($wrap-content);
+		padding: 0 15px;
+		@include space-between();
+		align-items: flex-start;
+	}
+
+	// .product__images
+
+	&__images {
+		flex-basis: 50%;
+		padding: 30px;
+		border: 3px solid #f1f1f1;
+		border-radius: 25px;
+		position: relative;
+		height: auto;
+		> img {
+			@include adapt-img();
+			margin: 0 auto;
+			display: block;
+		}
+	}
+
+	// .product__center
+
+	&__center {
+		flex-basis: 48%;
+	}
+
+	// .product__title
+	&__title {
+		flex-basis: 100%;
+		margin: 0 0 10px;
+		text-align: left;
+	}
+
+	// .product__column
+
+	&__column {
+		@include space-between();
+		align-items: flex-start;
+	}
+
+	&__description {
+		flex-basis: 50%;
+	}
+
+	// .prodcut__btn-price
+
+	&__btn-price {
+		padding: 10px;
+		background: $c-boldBlue;
+		color: $c-white;
+		text-decoration: none;
+		margin: 0 10px 10px 0;
+		line-height: none;
+		font-size: rem(10);
+		border-radius: 10px;
+		transition: 0.5s;
+		&:hover {
+			background-color: darken($c-hover, 15%);
+		}
+	}
+	// .product__features
+
+	&__features {
+		color: #000000;
+		font-size: rem(12);
+		font-family: "Comfortaa", Arial, sans-serif;
+		line-height: 1.7;
+		font-weight: 400;
+		margin: 0 0 5px;
+		span {
+			font-weight: bold;
+		}
+	}
+
+	// .product__row-price
+
+	&__row-price {
+		@include flc-start();
+		align-items: stretch;
+		margin: 10px 0;
+	}
+
+	// .product__price
+
+	&__price {
+		color: $c-gold;
+		font-size: 22px;
+		font-family: "Comfortaa", Arial, sans-serif;
+		line-height: 1.7;
+		font-weight: 700;
+		span {
+			transition: 0.5s;
+		}
+	}
+
+	// .product__btn-price--active
+	&__btn-price--active {
+		background-color: darken($c-boldBlue, 15%);
+	}
+
+	&__dostawa-darmowa {
+		font-size: rem(12);
+		color: $c-gold;
+		font-family: "Comfortaa", Arial, sans-serif;
+		line-height: 1.7;
+		font-weight: 400;
+		opacity: 0.8;
+		display: block;
+	}
+	&__btn {
+		display: block;
+		color: #293363;
+		font-size: 14px;
+		font-family: "Comfortaa", Arial, sans-serif;
+		font-weight: 600;
+		border-width: 1px;
+		border-radius: 30px;
+		text-decoration: none;
+		@include flc-center-center();
+		margin-bottom: 20px;
+		line-height: 0;
+		width: 100%;
+		border: 1px solid #293363;
+		height: 60px;
+		transition: 0.5s;
+		&:last-child {
+			color: $c-white;
+		}
+		&:hover {
+			color: $c-white;
+			background: darken($c-hover, 15%);
+		}
+	}
+
+	// .product__advantages
+
+	&__advantages {
+		background: $c-blue;
+		padding: 20px;
+		border-radius: 10px;
+		flex-basis: calc(100% - 51%);
+		> p {
+			@include flc-start();
+			align-items: flex-start;
+			margin-bottom: 20px;
+			> i {
+				width: 30px;
+				height: 30px;
+			}
+			> span {
+				flex-basis: calc(100% - 40px);
+				margin-left: 10px;
+				font-size: rem(12);
+				font-weight: bold;
+				color: $c-black;
+			}
+		}
+	}
+
+	@include mmax(907) {
+		&__images {
+			flex-basis: 100%;
+			margin-bottom: 20px;
+			> img {
+				max-width: 100%;
+				width: auto;
+			}
+		}
+		&__center {
+			flex-basis: 100%;
+			padding: 0 20px;
+		}
+	}
+	@include mmax(491) {
+		&__description {
+			flex-basis: 100%;
+		}
+		&__advantages {
+			flex-basis: 100%;
+		}
+	}
+}
+.gold {
+	color: $c-gold;
+}

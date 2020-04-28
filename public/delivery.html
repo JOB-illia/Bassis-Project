@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Артика</title>
+  
+
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="workspace">
+	<div class="workspace__cont">
+		<div class="workspace__header">
+			<header class="header">
+    <div class="header__row">
+        <a href="#" class="header__logo">
+            <i class="icon-logotype"></i>
+            <p>Żwirek silikonowy dla kota</p>
+        </a>
+        <nav class="header__nav">
+            <ul class="menu">
+                <li class="li-anim"><a href="#">Katalog</a></li>
+                <li class="li-anim"><a href="#">Dostawa</a></li>
+                <li class="li-anim"><a href="#">Recenzje</a></li>
+                <li class="li-anim"><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="header__basket">
+            <a href="#"><i class="icon-basket"></i></a>
+            <div class="burger">
+                <i class="icon-burger"></i>
+                <i class="icon-burger"></i>
+                <i class="icon-burger"></i>
+            </div>
+
+        </div>
+    </div>
+</header>
+		</div>
+		<main class="workspace__content">
+			<section class="delivery">
+				<div class="delivery__body">
+
+					<p class="delivery__title h240">Warunki dostawy i płatności</p>
+					<div class="delivery__row">
+						<div class="delivery__column">
+							<p><i class="icon-free"></i></p>
+							<div class="delivery__text-right">
+								<p class="delivery__text  text-default16">Dostawa całkowicie za darmo przy zamówieniu od 8 opakowań 3.8l
+									lub od 15 kg.
+								</p>
+								<span class="delivery__sub-text">W innym przypadku - dostawa 13.99 zł</span>
+							</div>
+						</div>
+						<div class="delivery__column">
+							<p><i class="icon-delivery"></i></p>
+							<div class="delivery__text-right">
+								<p class="delivery__text text-default16">Dostawa całkowicie za darmo przy zamówieniu od 8 opakowań 3.8l
+									lub od 15 kg.
+								</p>
+								<span class="delivery__sub-text">W innym przypadku - dostawa 13.99 zł</span>
+							</div>
+						</div>
+
+					</div>
+					<div class="delivery__gwarancje">
+
+						<p class="delivery__sub-title h330">Gwarancje</p>
+						<div class="delivery__gwarancje-column">
+							<p class="delivery__text text-default16">Jeśli otrzymasz żwirek o nieodpowiedniej jakości lub nie tej
+								objętości, którą - <span> masz prawo zrezygnować i nie płacić</span></p>
+							<p class="delivery__text text-default16">
+								Masz prawo do zwrotu nie użytego żwirku w ciągu 14 dni bez wyjaśnienia przyczyn
+							</p>
+						</div>
+						<p class="delivery__exclamation"><i class="icon-exclamation"></i> <span> Opłacasz przy odbiorze i pod
+								warunkiem, że
+								wszystko Ci odpowiada</span></p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div class="workspace__footer">
+
+			<footer class="footer">
+	<div class="footer__row">
+		<div class="footer__left">
+			<a href="#" class="footer__logo"><i class="icon-logotype"></i></a>
+			<div class="footer__contact">
+				<p>Bee Digital Sp. z o.o.</p>
+				<p>ul. Towarowa 35/49</p>
+				<p>00-869 Warszawa</p>
+				<p>NIP: 7010417805</p>
+			</div>
+		</div>
+		<div class="footer__right-menu">
+			<ul class="footer__menu">
+				<li><a href="#">Katalog</a></li>
+				<li><a href="#">Dostawa</a></li>
+				<li><a href="#">Recenzje</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Regulamin</a></li>
+				<li><a href="#">Kontakt</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+</footer>
+
+
+		</div>
+	</div>
+</div>
+<script src="js/main.js"></script>
+<script src="js/wow.js"></script>
+<script>
+    var wow = new WOW(
+        {
+            boxClass:     'wow',      // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset:       -100,          // distance to the element when triggering the animation (default is 0)
+            mobile:       false,       // trigger animations on mobile devices (default is true)
+            live:         true,       // act on asynchronously loaded content (default is true)
+            callback:     function(box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null,    // optional scroll container selector, otherwise use window,
+            resetAnimation: true,     // reset animation on end (default is true)
+        }
+    );
+    wow.init();
+
+</script>
+</body>
+</html>

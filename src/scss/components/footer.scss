@@ -1,0 +1,75 @@
+.footer {
+	position: relative;
+	overflow: hidden;
+	background: $c-blue;
+	margin: 80px 0px 0px 0px;
+	padding: 40px 0px 40px 0px;
+
+	&__row {
+		@include flc-center-center();
+		align-items: stretch;
+		flex-wrap: nowrap;
+		@include mmax($mobile-l) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__left {
+		margin: 0px 20px 0px 30px;
+		text-align: center;
+		flex-basis: 30%;
+		@include mmax($mobile-l) {
+			flex-basis: 100%;
+		}
+	}
+
+	&__logo {
+		display: block;
+		> i {
+			margin: 0 auto !important;
+		}
+	}
+
+	&__contact {
+	}
+
+	&__right-menu {
+		flex-basis: 30%;
+		margin: 0px 20px 0px 30px;
+		text-align: center;
+	}
+	&__menu {
+		list-style: none;
+		margin: 0px 0px 0px 0px;
+		padding: 0px 0px 0px 0px;
+		> li {
+			padding: 10px 0px 10px 0px;
+			> a {
+				text-decoration: none;
+				text-decoration: none;
+				color: $c-black;
+				font-size: rem(14);
+				font-family: "Comfortaa", Arial, sans-serif;
+				font-weight: 700;
+				position: relative;
+				&::before {
+					content: "";
+					width: 0;
+					height: 2px;
+					background: $c-black;
+					border-radius: 25px;
+					@include full-abs();
+					left: 0;
+					top: auto;
+					bottom: -5px;
+					transition: width 0.5s;
+				}
+				&:hover {
+					&::before {
+						width: 70%;
+					}
+				}
+			}
+		}
+	}
+}
