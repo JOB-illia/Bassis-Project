@@ -7,11 +7,25 @@
 		@include space-between();
 		align-items: stretch;
 		padding: 0 15px;
+		position: relative;
+		.absolut-cat {
+			@include full-abs();
+			width: 320px;
+			left: -320px;
+			top: 10%;
+			opacity: 0.8;
+		}
 	}
 	&__title {
 		text-align: center !important;
-		margin: 0px 0px 30px 0px;
+		margin: 0px 0px 30px 0px !important;
+		padding-top: 0 !important;
 	}
+	// .product__title--center
+	&__title--center {
+		text-align: center !important;
+	}
+
 	&__items {
 		flex-basis: 48%;
 		margin: 0px 0px 50px 0px;
@@ -135,5 +149,56 @@
 	&:hover {
 		background-color: #293363;
 		color: $c-white;
+	}
+}
+._product-active {
+	border-color: #fff;
+	background-color: #293363;
+	.prodcut-item__right-text {
+		.prodcut-item__characteristics-element {
+			color: $c-white;
+		}
+		.first-screen__btn {
+			border-color: $c-white;
+		}
+		.prodcut-item__btn {
+			border-color: $c-white;
+			color: $c-white;
+		}
+	}
+}
+.product--bg-margin {
+	margin: 0 0 -100px !important;
+	background-color: $c-blue;
+	padding: 0px 0px 30px 0px;
+	.product__title {
+		padding-top: rem(40) !important;
+		display: block;
+	}
+	.prodcut-item {
+		background: $c-white;
+		color: $c-black;
+		padding: 40px 5px 30px 5px;
+		.prodcut-item__right-text .prodcut-item__characteristics-element {
+			color: $c-black;
+			font-size: rem(16);
+		}
+		&:hover {
+			color: $c-black;
+			.prodcut-item__right-text .prodcut-item__characteristics-element {
+				color: $c-black;
+			}
+			.prodcut-item__btn {
+				border-color: $c-hover;
+				color: $c-black;
+				&:hover {
+					color: $c-white;
+				}
+			}
+		}
+	}
+	.product__btn--center {
+		background: $c-white;
+		color: $c-black;
 	}
 }

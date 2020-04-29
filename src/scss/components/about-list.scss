@@ -152,14 +152,14 @@
 			margin-bottom: rem(20) !important;
 		}
 		&__images {
-			right: -40%;
+			right: -100%;
 		}
 	}
 }
 @include mmax(514) {
 	.about-list {
 		&__images {
-			right: -60%;
+			right: -100%;
 		}
 	}
 }

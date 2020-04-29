@@ -157,26 +157,47 @@
 		</div>
 	</div>
 </div>
+<div class="pop-up">
+	<div class="pop-up__container">
+		<div class="pop-up__close">
+			<i></i>
+			<i></i>
+		</div>
+		<div class="pop-up__header">
+			<p class="pop-up__title h330">Masz pytania?</p>
+			<p class="pop-up__subtitle">Nasz konsultant oddzwoni do Ciebie i udzieli odpowiedzi</p>
+		</div>
+		<form action="" method="POST" class="form-body">
+			<input class="form-body__input" type="tel" placeholder="Telephone">
+			<input type="text" class="form-body__input" placeholder="Imię i nazwisko">
+			<button type="submit" class="form-body__btn">Zamawiam Barissę</button>
+		</form>
+		<span>Klikając oświadczasz, iż zgadzasz się z <a href="">polityka prywatności</a></span>
+	</div>
+</div>
+
+
 <script src="js/main.js"></script>
 <script src="js/wow.js"></script>
 <script>
-    var wow = new WOW(
-        {
-            boxClass:     'wow',      // animated element css class (default is wow)
-            animateClass: 'animated', // animation css class (default is animated)
-            offset:       -100,          // distance to the element when triggering the animation (default is 0)
-            mobile:       false,       // trigger animations on mobile devices (default is true)
-            live:         true,       // act on asynchronously loaded content (default is true)
-            callback:     function(box) {
-                // the callback is fired every time an animation is started
-                // the argument that is passed in is the DOM node being animated
-            },
-            scrollContainer: null,    // optional scroll container selector, otherwise use window,
-            resetAnimation: true,     // reset animation on end (default is true)
-        }
-    );
-    wow.init();
+	var wow = new WOW(
+		{
+			boxClass: 'wow',      // animated element css class (default is wow)
+			animateClass: 'animated', // animation css class (default is animated)
+			offset: -100,          // distance to the element when triggering the animation (default is 0)
+			mobile: false,       // trigger animations on mobile devices (default is true)
+			live: true,       // act on asynchronously loaded content (default is true)
+			callback: function (box) {
+				// the callback is fired every time an animation is started
+				// the argument that is passed in is the DOM node being animated
+			},
+			scrollContainer: null,    // optional scroll container selector, otherwise use window,
+			resetAnimation: true,     // reset animation on end (default is true)
+		}
+	);
+	wow.init();
 
 </script>
 </body>
+
 </html>

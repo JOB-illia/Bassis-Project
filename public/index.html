@@ -80,7 +80,8 @@
 							<div class=" first-screen__mobile-right">
 								<img src="img/photo.png" alt="">
 							</div>
-							<a data-wow-duration="2s" data-wow-delay=".3s" href="#" class="wow fadeInLeftBig first-screen__btn">Сhcę
+							<a data-wow-duration="2s" data-wow-delay=".3s" href="#"
+								class="wow fadeInLeftBig btn-pop first-screen__btn">Сhcę
 								zamówić!</a>
 							<div class="first-screen__column first-screen__column--width first-screen__column--hidden">
 								<div class="first-screen__mini-icon">
@@ -334,10 +335,12 @@
 					</div>
 				</div>
 			</section>
-			<section class="product">
-				<p data-wow-duration="2s" class="wow fadeInLeft product__title h240">Wybierz wielkość opakowania</p>
+			<section class="product product--bg-margin">
+				<p data-wow-duration="2s" class="wow fadeInLeft product__title h240 product__title--center">Wybierz wielkość
+					opakowania</p>
 				<div class="product__row">
-					<div data-wow-delay=".1s" class="wow fadeInUp product__items prodcut-item">
+					<!--<img src="i/noroot.png" alt="cat" class="absolut-cat">-->
+					<div data-wow-delay=".1s" class="wow fadeInUp product__items prodcut-item _product-active">
 						<div class="prodcut-item__images">
 							<img src="img/box1.png" alt="">
 						</div>
@@ -375,11 +378,11 @@
 						<div class="prodcut-item__right-text">
 							<p class="prodcut-item__characteristics-element">
 								<span>Objętość:</span>
-								1 opakowanie 3,8L
+								8 opakowań, 3,8L
 							</p>
 							<p class="prodcut-item__characteristics-element">
 								<span>Wystarczy:</span>
-								do 1,5 tygodnia
+								do 12 tygodni
 							</p>
 							<p class="prodcut-item__characteristics-element">
 								<span>Rodzaj:</span>
@@ -391,9 +394,9 @@
 							</p>
 							<p class="prodcut-item__characteristics-element prodcut-item__characteristics-element--gold">
 								<span>Dostawa:</span>
-								13,99 złotych kurier
+								Dostawa darmowa
 							</p>
-							<p class="price">12,99 złotych</p>
+							<p class="price">109,99 złotych</p>
 							<a href="#" class="prodcut-item__btn btn-default">Chcę spróbować</a>
 						</div>
 
@@ -406,11 +409,11 @@
 						<div class="prodcut-item__right-text">
 							<p class="prodcut-item__characteristics-element">
 								<span>Objętość:</span>
-								1 opakowanie 3,8L
+								15KG / 40L
 							</p>
 							<p class="prodcut-item__characteristics-element">
 								<span>Wystarczy:</span>
-								do 1,5 tygodnia
+								do 16 tygodni
 							</p>
 							<p class="prodcut-item__characteristics-element">
 								<span>Rodzaj:</span>
@@ -422,9 +425,9 @@
 							</p>
 							<p class="prodcut-item__characteristics-element prodcut-item__characteristics-element--gold">
 								<span>Dostawa:</span>
-								13,99 złotych kurier
+								Dostawa darmowa
 							</p>
-							<p class="price">12,99 złotych</p>
+							<p class="price">109,99 złotych</p>
 							<a href="#" class="prodcut-item__btn btn-default">Chcę spróbować</a>
 						</div>
 
@@ -497,53 +500,74 @@
 </div>
 <script>
 	let boxContainer = document.getElementById('facts'),
-			boxContainerItems = document.querySelectorAll('.facts__column');
-		function returnLastArr(arr) {
-			return arr[arr.length - 1];
-		}
-		let lastBox = returnLastArr(boxContainerItems);
-		if (window.screen.availWidth > 1200) {
-			window.addEventListener('scroll', () => {
-				function fixedContainer() {
-					if (boxContainer.getBoundingClientRect().top <= 90) {
-						boxContainer.classList.add('active-fixed');
-					} else {
-						boxContainer.classList.remove('active-fixed');
-					}
+		boxContainerItems = document.querySelectorAll('.facts__column');
+	function returnLastArr(arr) {
+		return arr[arr.length - 1];
+	}
+	let lastBox = returnLastArr(boxContainerItems);
+	if (window.screen.availWidth > 1200) {
+		window.addEventListener('scroll', () => {
+			function fixedContainer() {
+				if (boxContainer.getBoundingClientRect().top <= 90) {
+					boxContainer.classList.add('active-fixed');
+				} else {
+					boxContainer.classList.remove('active-fixed');
 				}
-				fixedContainer();
-				function endFixedContainer() {
-					if (lastBox.getBoundingClientRect().top <= 250) {
-						boxContainer.classList.remove('active-fixed');
-						boxContainer.classList.add('active-end');
-					} else {
-						boxContainer.classList.remove('active-end');
-					}
+			}
+			fixedContainer();
+			function endFixedContainer() {
+				if (lastBox.getBoundingClientRect().top <= 250) {
+					boxContainer.classList.remove('active-fixed');
+					boxContainer.classList.add('active-end');
+				} else {
+					boxContainer.classList.remove('active-end');
 				}
-				endFixedContainer();
-			});
-		}
+			}
+			endFixedContainer();
+		});
+	}
 </script>
+<div class="pop-up">
+	<div class="pop-up__container">
+		<div class="pop-up__close">
+			<i></i>
+			<i></i>
+		</div>
+		<div class="pop-up__header">
+			<p class="pop-up__title h330">Masz pytania?</p>
+			<p class="pop-up__subtitle">Nasz konsultant oddzwoni do Ciebie i udzieli odpowiedzi</p>
+		</div>
+		<form action="" method="POST" class="form-body">
+			<input class="form-body__input" type="tel" placeholder="Telephone">
+			<input type="text" class="form-body__input" placeholder="Imię i nazwisko">
+			<button type="submit" class="form-body__btn">Zamawiam Barissę</button>
+		</form>
+		<span>Klikając oświadczasz, iż zgadzasz się z <a href="">polityka prywatności</a></span>
+	</div>
+</div>
+
+
 <script src="js/main.js"></script>
 <script src="js/wow.js"></script>
 <script>
-    var wow = new WOW(
-        {
-            boxClass:     'wow',      // animated element css class (default is wow)
-            animateClass: 'animated', // animation css class (default is animated)
-            offset:       -100,          // distance to the element when triggering the animation (default is 0)
-            mobile:       false,       // trigger animations on mobile devices (default is true)
-            live:         true,       // act on asynchronously loaded content (default is true)
-            callback:     function(box) {
-                // the callback is fired every time an animation is started
-                // the argument that is passed in is the DOM node being animated
-            },
-            scrollContainer: null,    // optional scroll container selector, otherwise use window,
-            resetAnimation: true,     // reset animation on end (default is true)
-        }
-    );
-    wow.init();
+	var wow = new WOW(
+		{
+			boxClass: 'wow',      // animated element css class (default is wow)
+			animateClass: 'animated', // animation css class (default is animated)
+			offset: -100,          // distance to the element when triggering the animation (default is 0)
+			mobile: false,       // trigger animations on mobile devices (default is true)
+			live: true,       // act on asynchronously loaded content (default is true)
+			callback: function (box) {
+				// the callback is fired every time an animation is started
+				// the argument that is passed in is the DOM node being animated
+			},
+			scrollContainer: null,    // optional scroll container selector, otherwise use window,
+			resetAnimation: true,     // reset animation on end (default is true)
+		}
+	);
+	wow.init();
 
 </script>
 </body>
+
 </html>

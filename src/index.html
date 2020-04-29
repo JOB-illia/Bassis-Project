@@ -44,7 +44,8 @@
 							<div class=" first-screen__mobile-right">
 								<img src="img/photo.png" alt="">
 							</div>
-							<a data-wow-duration="2s" data-wow-delay=".3s" href="#" class="wow fadeInLeftBig first-screen__btn">Сhcę
+							<a data-wow-duration="2s" data-wow-delay=".3s" href="#"
+								class="wow fadeInLeftBig btn-pop first-screen__btn">Сhcę
 								zamówić!</a>
 							<div class="first-screen__column first-screen__column--width first-screen__column--hidden">
 								<div class="first-screen__mini-icon">
@@ -298,10 +299,12 @@
 					</div>
 				</div>
 			</section>
-			<section class="product">
-				<p data-wow-duration="2s" class="wow fadeInLeft product__title h240">Wybierz wielkość opakowania</p>
+			<section class="product product--bg-margin">
+				<p data-wow-duration="2s" class="wow fadeInLeft product__title h240 product__title--center">Wybierz wielkość
+					opakowania</p>
 				<div class="product__row">
-					<div data-wow-delay=".1s" class="wow fadeInUp product__items prodcut-item">
+					<!--<img src="i/noroot.png" alt="cat" class="absolut-cat">-->
+					<div data-wow-delay=".1s" class="wow fadeInUp product__items prodcut-item _product-active">
 						<div class="prodcut-item__images">
 							<img src="img/box1.png" alt="">
 						</div>
@@ -339,11 +342,11 @@
 						<div class="prodcut-item__right-text">
 							<p class="prodcut-item__characteristics-element">
 								<span>Objętość:</span>
-								1 opakowanie 3,8L
+								8 opakowań, 3,8L
 							</p>
 							<p class="prodcut-item__characteristics-element">
 								<span>Wystarczy:</span>
-								do 1,5 tygodnia
+								do 12 tygodni
 							</p>
 							<p class="prodcut-item__characteristics-element">
 								<span>Rodzaj:</span>
@@ -355,9 +358,9 @@
 							</p>
 							<p class="prodcut-item__characteristics-element prodcut-item__characteristics-element--gold">
 								<span>Dostawa:</span>
-								13,99 złotych kurier
+								Dostawa darmowa
 							</p>
-							<p class="price">12,99 złotych</p>
+							<p class="price">109,99 złotych</p>
 							<a href="#" class="prodcut-item__btn btn-default">Chcę spróbować</a>
 						</div>
 
@@ -370,11 +373,11 @@
 						<div class="prodcut-item__right-text">
 							<p class="prodcut-item__characteristics-element">
 								<span>Objętość:</span>
-								1 opakowanie 3,8L
+								15KG / 40L
 							</p>
 							<p class="prodcut-item__characteristics-element">
 								<span>Wystarczy:</span>
-								do 1,5 tygodnia
+								do 16 tygodni
 							</p>
 							<p class="prodcut-item__characteristics-element">
 								<span>Rodzaj:</span>
@@ -386,9 +389,9 @@
 							</p>
 							<p class="prodcut-item__characteristics-element prodcut-item__characteristics-element--gold">
 								<span>Dostawa:</span>
-								13,99 złotych kurier
+								Dostawa darmowa
 							</p>
-							<p class="price">12,99 złotych</p>
+							<p class="price">109,99 złotych</p>
 							<a href="#" class="prodcut-item__btn btn-default">Chcę spróbować</a>
 						</div>
 
@@ -437,31 +440,31 @@
 </div>
 <script>
 	let boxContainer = document.getElementById('facts'),
-			boxContainerItems = document.querySelectorAll('.facts__column');
-		function returnLastArr(arr) {
-			return arr[arr.length - 1];
-		}
-		let lastBox = returnLastArr(boxContainerItems);
-		if (window.screen.availWidth > 1200) {
-			window.addEventListener('scroll', () => {
-				function fixedContainer() {
-					if (boxContainer.getBoundingClientRect().top <= 90) {
-						boxContainer.classList.add('active-fixed');
-					} else {
-						boxContainer.classList.remove('active-fixed');
-					}
+		boxContainerItems = document.querySelectorAll('.facts__column');
+	function returnLastArr(arr) {
+		return arr[arr.length - 1];
+	}
+	let lastBox = returnLastArr(boxContainerItems);
+	if (window.screen.availWidth > 1200) {
+		window.addEventListener('scroll', () => {
+			function fixedContainer() {
+				if (boxContainer.getBoundingClientRect().top <= 90) {
+					boxContainer.classList.add('active-fixed');
+				} else {
+					boxContainer.classList.remove('active-fixed');
 				}
-				fixedContainer();
-				function endFixedContainer() {
-					if (lastBox.getBoundingClientRect().top <= 250) {
-						boxContainer.classList.remove('active-fixed');
-						boxContainer.classList.add('active-end');
-					} else {
-						boxContainer.classList.remove('active-end');
-					}
+			}
+			fixedContainer();
+			function endFixedContainer() {
+				if (lastBox.getBoundingClientRect().top <= 250) {
+					boxContainer.classList.remove('active-fixed');
+					boxContainer.classList.add('active-end');
+				} else {
+					boxContainer.classList.remove('active-end');
 				}
-				endFixedContainer();
-			});
-		}
+			}
+			endFixedContainer();
+		});
+	}
 </script>
 {% include "html/_document-footer.html" %}

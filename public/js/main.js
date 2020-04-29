@@ -81,4 +81,34 @@ window.addEventListener("DOMContentLoaded", function () {
 			priceGold.textContent = priceData;
 		})
 	});
+
+
+
+
+	// pop-up
+	let pop = document.querySelector('.pop-up');
+	let closePop = document.querySelector('.pop-up__close');
+	let btnOpen = document.querySelectorAll('.btn-pop');
+
+	btnOpen.forEach((item) => {
+		item.addEventListener('click', (e) => {
+			e.preventDefault();
+			pop.classList.add('_pop-active');
+		});
+	});
+	closePop.addEventListener('click', () => pop.classList.remove('_pop-active'));
+	function popTarget() {
+		pop.addEventListener('click', (event) => {
+			let target = event.target;
+			if (target && !target.closest('.pop-up__container')) {
+				pop.classList.remove('_pop-active');
+			}
+		})
+	}
+	popTarget();
+
+
+	// validate number phone
+
+
 });
